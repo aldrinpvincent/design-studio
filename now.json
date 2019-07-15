@@ -1,0 +1,1 @@
+{"version":2,"name":"css-snippets","builds":[{"src":"package.json","use":"@now/next"}]}

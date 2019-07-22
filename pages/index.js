@@ -1,15 +1,11 @@
-import Layout from "../components/layout.js";
-import Snippets from "../components/snippets";
-import Preview from "../components/preview";
+import Layout from "../components/layout/index.js";
+import Buttons from "./buttons.js";
 
 function Index() {
   return (
-
     <Layout>
-      <Snippets />
-      <Preview />
+      <Buttons />
     </Layout >
-
   );
 }
 

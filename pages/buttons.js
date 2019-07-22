@@ -1,32 +1,24 @@
 import React, { useState } from "react";
-import Snippet from "../components/code";
+import Components from "../components/layout/components";
+import Preview from "../components/layout/previewer";
 
 const Buttons = () => {
   const [type, setType] = useState("");
 
-  function handleClick(e) {}
+  function handleClick(e) { }
 
   return (
     <>
       <h3>Buttons</h3>
-      <section className="container">
-        <section className="left-half">
-          <button className="grow" onClick={handleClick}>
-            Grow
-          </button>
-        </section>
-        <section className="right-half">
-          <Snippet>{type}</Snippet>
-        </section>
-
-        <style jsx>{`
-          .container {
-            display: flex;
-          }
-          .left-half {
-            flex: 1;
-            padding: 1rem;
-          }
+      <Components>
+        <button className="grow" onClick={handleClick}>
+          Grow
+        </button>
+      </Components>
+      <Preview>
+        prewviww
+      </Preview>
+      <style jsx>{`
           .grow {
             color: #1d9af2;
             background-color: #292d3e;
@@ -41,13 +33,8 @@ const Buttons = () => {
           .grow:hover {
             transform: scale(1.1);
           }
-
-          .right-half {
-            flex: 1;
-            padding: 1rem;
-          }
         `}</style>
-      </section>
+
     </>
   );
 };

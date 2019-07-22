@@ -1,16 +1,15 @@
-import Link from "next/link";
-import Header from "../components/header";
+import Layout from "../components/layout.js";
+import Snippets from "../components/snippets";
+import Preview from "../components/preview";
 
 function Index() {
   return (
-    <main>
-      <Header />
-      <section>
-        <Link href="/about">
-          <a>Go to About Me</a>
-        </Link>
-      </section>
-    </main>
+
+    <Layout>
+      <Snippets />
+      <Preview />
+    </Layout >
+
   );
 }
 

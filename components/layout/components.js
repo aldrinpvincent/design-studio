@@ -5,7 +5,7 @@ const Components = ({ children }) => {
       {children}
       <style jsx>{`
         section {
-          background-color: #ff9e2c;
+          background-color: #F9F0F0;
           flex: 1;
           padding: 1rem;
         }

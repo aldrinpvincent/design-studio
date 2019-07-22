@@ -17,7 +17,8 @@ const Menu = () => (
     </ul>
     <style jsx>{`
       nav {
-        flex-basis: 200px;
+        width: 200px;
+        flex-shrink: 0;
       }
       .active:after {
         content: " (current page)";

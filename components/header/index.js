@@ -1,10 +1,7 @@
 function Header() {
   return (
-    <section>
-      <header>
-        <h1>header</h1>
-      </header>
-
+    <header>
+      <h1>header</h1>
       <style jsx>
         {`
           section {
@@ -12,7 +9,7 @@ function Header() {
           }
         `}
       </style>
-    </section>
+    </header>
   );
 }
 

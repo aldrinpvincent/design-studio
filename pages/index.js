@@ -3,9 +3,9 @@ import Buttons from "./buttons.js";
 
 function Index() {
   return (
-    <Layout>
-      <Buttons />
-    </Layout >
+
+    <Buttons />
+
   );
 }
 

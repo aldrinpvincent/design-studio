@@ -6,12 +6,12 @@ const Menu = () => (
     <ul>
       <li>
         <Link activeClassName="active" href="/">
-          <button>Home</button>
+          <a>Home</a>
         </Link>
       </li>
       <li>
         <Link activeClassName="active" href="/buttons">
-          <button>Buttons</button>
+          <a>Buttons</a>
         </Link>
       </li>
     </ul>
@@ -19,14 +19,20 @@ const Menu = () => (
       nav {
         width: 200px;
         flex-shrink: 0;
+       
       }
-      .active:after {
-        content: " (current page)";
-      }
-      .li {
+      li a{
         text-decoration: none;
         padding: 10px;
         display: block;
+      }
+      ul {
+        list-style: none;
+        padding-left : 20px;
+      }
+
+      .active {
+        background-color: #e6f7ff;
       }
     `}</style>
   </nav>

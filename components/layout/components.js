@@ -1,13 +1,15 @@
 const Components = ({ children }) => {
   return (
     <section>
-      <button>button</button>
       {children}
       <style jsx>{`
         section {
-          background-color: #F9F0F0;
+             border: 1px solid #ebedf0;
+    border-radius: 2px;
+    transition: all .2s;
           flex: 1;
           padding: 1rem;
+           margin-left : 10px; 
         }
       `}</style>
     </section>

@@ -1,33 +1,61 @@
-const Preview = ({ html, css1 }) => {
+import React, { useState, useRef } from 'react';
+import css from 'styled-jsx/css';
+// import styles from './st.css'
 
-  const css = `
-            color: #1d9af2;
-            background-color: #292d3e;
-            border: 1px solid #1d9af2;
-            border-radius: 4px;
-            padding: 0 15px;
-            cursor: pointer;
-            height: 32px;
-            font-size: 14px;
-            transition: all 0.2s ease-in-out;`
+
+
+// const button = css`button { color: ${`blue`}; }`
+
+const a = `.cls { color: ${`blue`}; }`
+
+const styles = css`${a}`
+
+
+const Preview = ({ data }) => {
+
+  // console.log('data :', data);
+
+  const [cssa, setcss] = useState(() => {
+    return `button {
+            color: #fff;
+              background-color: #007bff;
+              border-color: #007bff;
+border-radius : 10px;
+          }
+          button:hover {
+            transform: scale(1.1);
+          }`;
+  });
+
+
+
+
+  // const but = useRef(css`button { color: blue; }`);
+
+
 
   return (
     <section>
       Preview
-      <article className="html"><button>button</button></article>
-      <article className="css"><textarea rows="15" cols="50">{css}</textarea></article>
-      <style jsx>{`
+      <article className="html"><button id="1" className="cls">button</button></article>
+      Styles
+      <article className="css"><textarea onChange={(e) => { setcss(e.target.value) }} rows="15" cols="50" defaultValue={cssa}></textarea></article>
 
+      <style jsx>{`
         article { 
            display: flex;
            align-items: center;
           justify-content: center;
         }
         section {
-          background-color: aqua;
+         
+          border: 1px solid #ebedf0;
+    border-radius: 2px;
+    transition: all .2s;
           flex: 1;
           padding: 1rem;
           height  :100%;
+          margin : 0 10px 0 20px; 
         }
         .html {
             background-color: white;
@@ -40,13 +68,10 @@ const Preview = ({ html, css1 }) => {
             border: 1px solid bisque;
             height : 50vh; 
         }
-        button {
-            ${css}
-          }
-          button:hover {
-            transform: scale(1.1);
-          }
-      `}</style>
+        `}</style>
+
+      <style jsx>{styles}</style>
+
     </section>
   );
 };

@@ -1,18 +1,15 @@
 import styled from '@emotion/styled';
 
-const Item = props => {
+const Button = ({ button, onClick }) => {
 
-  const { data, onClick } = props;
-  const Thing = styled.div`
- ${data.css}
-  }
-`
+  const { name, css } = button;
+  const Wrapper = styled.section`${css}}`;
 
   return (
-    <Thing>
-      <button onClick={onClick} className={data.name}>{data.name}</button>
-    </Thing>
+    <Wrapper>
+      <button onClick={onClick}>{name}</button>
+    </Wrapper>
   );
 };
 
-export default Item;
+export default Button;

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Items from "../components/layout/components";
-import Preview from "../components/layout/previewer";
+import Items from "../components/layout/Items";
+import Previewer from "../components/layout/previewer";
 import Layout from "../components/layout";
 import { buttonsData } from "../data/button";
-import Item from "../components/Item/Button";
+import Button from "../components/Item/Button";
 
 const Buttons = () => {
 
@@ -17,13 +17,10 @@ const Buttons = () => {
     <Layout>
       <Items>
         {buttonsData.map(button => {
-          return (<Item key={button.name} onClick={() => { handleClick(button) }} data={button} />)
-
+          return (<Button key={button.name} onClick={() => { handleClick(button) }} button={button} />)
         })}
       </Items>
-      <Preview data={button}>
-        prewviww
-      </Preview>
+      <Previewer button={button} />
     </Layout >
   );
 };

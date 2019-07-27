@@ -1,45 +1,31 @@
-import React, { useState, useRef } from 'react';
-import css from 'styled-jsx/css';
-// import styles from './st.css'
-
-
-
-// const button = css`button { color: ${`blue`}; }`
-
-const a = `.cls { color: ${`blue`}; }`
-
-const styles = css`${a}`
-
+import React, { useState, useEffect } from 'react';
+import styled from '@emotion/styled';
 
 const Preview = ({ data }) => {
 
-  // console.log('data :', data);
+  const { css } = data;
+  const [cssa, setcss] = useState(data.css);
 
-  const [cssa, setcss] = useState(() => {
-    return `button {
-            color: #fff;
-              background-color: #007bff;
-              border-color: #007bff;
-border-radius : 10px;
-          }
-          button:hover {
-            transform: scale(1.1);
-          }`;
-  });
+  useEffect(() => {
+    setcss(css)
+  }, [css]);
 
 
-
-
-  // const but = useRef(css`button { color: blue; }`);
-
-
+  const Thing = styled.div`${cssa}}`
 
   return (
     <section>
       Preview
-      <article className="html"><button id="1" className="cls">button</button></article>
+      <article className="html">
+
+        <Thing>
+          <button className={data.name}>{data.name}</button>
+        </Thing>
+
+
+      </article>
       Styles
-      <article className="css"><textarea onChange={(e) => { setcss(e.target.value) }} rows="15" cols="50" defaultValue={cssa}></textarea></article>
+      <article className="css"><textarea onChange={(e) => { setcss(e.target.value) }} rows="15" cols="50" value={cssa}></textarea></article>
 
       <style jsx>{`
         article { 
@@ -69,8 +55,6 @@ border-radius : 10px;
             height : 50vh; 
         }
         `}</style>
-
-      <style jsx>{styles}</style>
 
     </section>
   );

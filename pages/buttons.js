@@ -1,23 +1,27 @@
 import React, { useState } from "react";
-import Components from "../components/layout/components";
+import Items from "../components/layout/components";
 import Preview from "../components/layout/previewer";
 import Layout from "../components/layout";
 import { buttonsData } from "../data/button";
-
-
+import Item from "../components/Item/Button";
 
 const Buttons = () => {
 
-  function handleClick(e) { }
+  const [button, setButton] = useState({});
+
+  function handleClick(button) {
+    setButton(button);
+  }
 
   return (
     <Layout>
-      <Components>
-        <button onClick={handleClick}>
-          Grow
-        </button>
-      </Components>
-      <Preview data={buttonsData}>
+      <Items>
+        {buttonsData.map(button => {
+          return (<Item key={button.name} onClick={() => { handleClick(button) }} data={button} />)
+
+        })}
+      </Items>
+      <Preview data={button}>
         prewviww
       </Preview>
     </Layout >

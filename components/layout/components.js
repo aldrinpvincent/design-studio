@@ -1,4 +1,4 @@
-const Components = ({ children }) => {
+const Items = ({ children }) => {
   return (
     <section>
       {children}
@@ -16,4 +16,4 @@ const Components = ({ children }) => {
   );
 };
 
-export default Components;
+export default Items;

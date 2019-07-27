@@ -26,6 +26,11 @@ const Menu = () => (
         padding: 10px;
         display: block;
       }
+
+      li a.active::after {
+            content: '|';
+            float : right;
+      }
       ul {
         list-style: none;
         padding-left : 20px;

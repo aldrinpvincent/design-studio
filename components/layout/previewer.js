@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 const Previewer = ({ button }) => {
   const { css, name } = button;
   const [styles, setStyles] = useState(css);
-  const Wrapper = styled.section`${styles}}`;
+  const Wrapper = styled.div`${styles}}`;
 
   useEffect(() => {
     setStyles(css)
@@ -25,12 +25,12 @@ const Previewer = ({ button }) => {
       </article>
 
       CSS
-      <article className="css"><textarea onChange={(e) => { setStyles(e.target.value) }} rows="15" cols="50" value={styles}></textarea></article>
+      <article className="css"><textarea onChange={(e) => { setStyles(e.target.value) }} value={styles}></textarea></article>
 
       <style jsx>{`
         article { 
-           display: flex;
-           align-items: center;
+          display: flex;
+          align-items: center;
           justify-content: center;
         }
         section {
@@ -43,7 +43,7 @@ const Previewer = ({ button }) => {
           margin : 0 10px 0 20px; 
         }
         .preview{
-           background-color: white;
+            background-color: white;
             border: 1px solid bisque;
             margin-bottom : 20px;
             min-height : 10vh;   
@@ -59,6 +59,13 @@ const Previewer = ({ button }) => {
             border: 1px solid bisque;
             min-height : 50vh; 
         }
+        .css textarea{
+          box-sizing: border-box; /* fit parent width */
+           min-height : 48vh; 
+          width: 100%;
+          margin : 2rem;
+        }
+        
         `}</style>
 
     </section>

@@ -1,9 +1,20 @@
 export const buttonsData = [
-  { name: "default", css: `` },
   {
-    name: "primary",
-    css: `button{color: #fff;
-              background-color: #007bff;
-              border-color: #007bff;}`
+    name: "Default",
+    css: `
+    button {
+      width : 81px;
+      height : 32px;
+    }` },
+  {
+    name: "Colored",
+    css: `
+    button {
+      color: #fff;
+      background-color: #007bff;
+      width : 81px;
+      height : 32px;
+    }
+`
   }
 ]

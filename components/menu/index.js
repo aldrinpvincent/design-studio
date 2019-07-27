@@ -14,17 +14,28 @@ const Menu = () => (
           <a>Buttons</a>
         </Link>
       </li>
+      <li>
+        <Link activeClassName="active" href="/loaders">
+          <a>Loading Indicators</a>
+        </Link>
+      </li>
+      <li>
+        <Link activeClassName="active" href="/animations">
+          <a>Animations</a>
+        </Link>
+      </li>
     </ul>
     <style jsx>{`
       nav {
         width: 200px;
         flex-shrink: 0;
-       
       }
       li a{
         text-decoration: none;
         padding: 10px;
         display: block;
+        color : grey;
+        font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
       }
 
       li a.active::after {
@@ -36,8 +47,9 @@ const Menu = () => (
         padding-left : 20px;
       }
 
-      .active {
+      li a.active {
         background-color: #e6f7ff;
+        color: #1890ff;
       }
     `}</style>
   </nav>

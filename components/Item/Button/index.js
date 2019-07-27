@@ -1,14 +1,22 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 const Button = ({ button, onClick }) => {
-
   const { name, css } = button;
-  const Wrapper = styled.section`${css}}`;
+  const Wrapper = styled.span`
+    ${css}}
+  `;
 
   return (
-    <Wrapper>
-      <button onClick={onClick}>{name}</button>
-    </Wrapper>
+    <span>
+      <Wrapper>
+        <button onClick={onClick}>{name}</button>
+      </Wrapper>
+      <style jsx>{`
+        span {
+          margin: 0 12px;
+        }
+      `}</style>
+    </span>
   );
 };
 

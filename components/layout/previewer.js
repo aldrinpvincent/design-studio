@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
+import Editor from '../editor';
 
 const Previewer = ({ button }) => {
   const { css, name } = button;
@@ -25,7 +26,8 @@ const Previewer = ({ button }) => {
       </article>
 
       CSS
-      <article className="css"><textarea onChange={(e) => { setStyles(e.target.value) }} value={styles}></textarea></article>
+      {<Editor onChange={(styles) => { setStyles(styles) }} value={styles} />}
+      {/* {<article className="css"><textarea onChange={(e) => { setStyles(e.target.value) }} value={styles}></textarea></article>} */}
 
       <style jsx>{`
         article { 

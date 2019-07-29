@@ -14,7 +14,6 @@ export const buttonsData = [
       background-color: #007bff;
       width : 81px;
       height : 32px;
-    }
-`
+    }`
   }
 ]

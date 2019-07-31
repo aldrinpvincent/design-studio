@@ -9,6 +9,7 @@ const Items = ({ children }) => {
           flex: 1;
           padding: 1rem;
           margin-left : 10px; 
+          box-sizing: border-box;
         }
       `}</style>
     </section>

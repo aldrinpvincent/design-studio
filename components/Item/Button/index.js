@@ -7,16 +7,17 @@ const Button = ({ button, onClick }) => {
   `;
 
   return (
-    <span>
+    <>
       <Wrapper>
         <button onClick={onClick}>{name}</button>
       </Wrapper>
       <style jsx>{`
         span {
-          margin: 0 12px;
+          margin: 5px 12px;
+          display: inline-block;
         }
       `}</style>
-    </span>
+    </>
   );
 };
 

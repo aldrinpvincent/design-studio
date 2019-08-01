@@ -48,7 +48,6 @@ export const buttonsData = [
   {
     name: "Short Jump",
     css: `
-
 button:hover {
     transform: translate3d(0px, -2px, 0px);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px 0px;

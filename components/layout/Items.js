@@ -10,6 +10,7 @@ const Items = ({ children }) => {
           padding: 1rem;
           margin-left : 10px; 
           box-sizing: border-box;
+          box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
         }
       `}</style>
     </section>

@@ -5,17 +5,17 @@ const Editor = (props) => {
     if (typeof window !== 'undefined') {
         const AceEditor = require('react-ace').default;
         require('brace/mode/css');
-        require('brace/theme/monokai');
+        require('brace/theme/kuroir');
 
         return (
             <AceEditor
                 mode="css"
-                theme="monokai"
+                theme="kuroir"
                 name="css-editor"
                 editorProps={{ $blockScrolling: true }}
-                enableBasicAutocompletion={true}
-                enableLiveAutocompletion={true}
-                enableSnippets={true}
+                // enableBasicAutocompletion={true}
+                // enableLiveAutocompletion={true}
+                // enableSnippets={true}
                 {...props}
             />
         )

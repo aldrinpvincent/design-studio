@@ -20,7 +20,7 @@ const Buttons = () => {
           return (<Button key={button.name} onClick={() => { handleClick(button) }} button={button} />)
         })}
       </Items>
-      <Previewer button={button} />
+      <Previewer item={button} type="button" />
     </Layout >
   );
 };

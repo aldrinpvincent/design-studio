@@ -20,8 +20,8 @@ const Menu = () => (
         </Link>
       </li>
       <li>
-        <Link activeClassName="active" href="/animations">
-          <a>Animations</a>
+        <Link activeClassName="active" href="/inputs">
+          <a>Input Element</a>
         </Link>
       </li>
     </ul>

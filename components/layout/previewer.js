@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import Editor from '../editor';
 
-const Previewer = ({ button }) => {
-  const { css, name } = button;
+const Previewer = ({ item, type }) => {
+  const { css, name } = item;
   const [styles, setStyles] = useState(css);
   const Wrapper = styled.div`${styles}}`;
 
@@ -18,7 +18,7 @@ const Previewer = ({ button }) => {
       </p>
       <article className="preview">
         <Wrapper>
-          {name && <button >{name}</button>}
+          {name && type === "button" ? <button >{name}</button> : <div />}
         </Wrapper>
       </article>
 
@@ -26,7 +26,7 @@ const Previewer = ({ button }) => {
         HTML
       </p>
       <article className="html">
-        {name && ` <button>${name}</button>`}
+        {name && type === "button" ? `<button>${name}</button>` : name && `<div> </div>`}
       </article>
 
       <p>

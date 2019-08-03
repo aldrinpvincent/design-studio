@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 
-const Button = ({ button, onClick }) => {
-  const { name, css } = button;
+const Loader = ({ loader, onClick }) => {
+  const { name, css } = loader;
   const Wrapper = styled.span`${css}}`;
 
   return (
     <>
       <Wrapper>
-        <button onClick={onClick}>{name}</button>
+        <div onClick={onClick}></div>
       </Wrapper>
       <style jsx>{`
         span {
@@ -19,4 +19,4 @@ const Button = ({ button, onClick }) => {
   );
 };
 
-export default Button;
+export default Loader;

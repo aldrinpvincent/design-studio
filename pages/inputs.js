@@ -5,7 +5,7 @@ const Animations = () => {
   return (
     <Layout>
       <section>
-        <p>Animations</p>
+        <p>Inputs</p>
       </section>
     </Layout>
   );

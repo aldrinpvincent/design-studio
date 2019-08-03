@@ -11,7 +11,7 @@ const Layout = props => (
     <style jsx>{`
         .container {
           display: flex;
-        }
+        };
       `}</style>
   </main>
 );

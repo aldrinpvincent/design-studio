@@ -8,7 +8,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
-    "next": "^9.0.2",
+    "next": "^9.0.3",
     "react": "^16.8.6",
     "react-ace": "^7.0.2",
     "react-dom": "^16.8.6"

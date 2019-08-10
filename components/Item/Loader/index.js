@@ -2,17 +2,29 @@ import styled from "@emotion/styled";
 
 const Loader = ({ loader, onClick }) => {
   const { name, css } = loader;
-  const Wrapper = styled.span`${css}}`;
+  const Wrapper = styled.span`
+    ${css}}
+  `;
 
   return (
     <>
-      <Wrapper>
-        <div onClick={onClick}></div>
+      <Wrapper onClick={onClick}>
+        <div />
       </Wrapper>
       <style jsx>{`
         span {
-          margin: 5px 12px;
-          display: inline-block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100px;
+          box-sizing: border-box;
+        }
+        span:hover {
+          border-style: groove;
+        }
+        .active {
+          background-color: rgba(0, 0, 0, 0.05);
+          border-style: groove;
         }
       `}</style>
     </>

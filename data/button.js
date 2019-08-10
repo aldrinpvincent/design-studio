@@ -43,8 +43,8 @@ button:hover {
     name: "Round",
     css: `
    button {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     padding: 0;
     font-size: 14px;
     border-radius: 50%;

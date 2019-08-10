@@ -15,7 +15,7 @@ const Buttons = () => {
 
   return (
     <Layout>
-      <Items>
+      <Items >
         {buttonsData.map(button => {
           return (<Button key={button.name} onClick={() => { handleClick(button) }} button={button} />)
         })}

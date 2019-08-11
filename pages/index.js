@@ -1,10 +1,10 @@
 import Layout from "../components/layout/index.js";
-import Buttons from "./buttons.js";
+import Home from "../components/Home/index.js";
 
 function Index() {
   return (
 
-    <Buttons />
+    <Home />
 
   );
 }

@@ -5,11 +5,6 @@ const Menu = () => (
   <nav>
     <ul>
       <li>
-        <Link activeClassName="active" href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <li>
         <Link activeClassName="active" href="/buttons">
           <a>Buttons</a>
         </Link>

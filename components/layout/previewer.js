@@ -29,11 +29,11 @@ const Previewer = ({ item, type }) => {
             type === "button" ? (
               <button>{name}</button>
             ) : (
-              <div />
-            )
+                <div />
+              )
           ) : (
-            "Select a component from left for customization"
-          )}
+              "Select a component from left for customization"
+            )}
         </Wrapper>
       </article>
 
@@ -45,24 +45,24 @@ const Previewer = ({ item, type }) => {
       </article>
 
       <p className="inline">CSS</p>
-      <div
-        className={showHelp ? "tooltips" : "hide"}
+      {showHelp && <div
+        className="tooltips"
         onClick={() => {
           setShowHelp(false);
-        }}
-      >
-        <span>Please edit the below CSS to customize the styles</span>
+        }}>
+        <span> Edit below CSS to customize the styles</span>
       </div>
-      {
-        <div className="editor">
-          <Editor
-            onChange={styles => {
-              setStyles(styles);
-            }}
-            value={styles}
-          />
-        </div>
       }
+      <div className="editor">
+        <Editor
+          onChange={styles => {
+            setStyles(styles);
+            setShowHelp(false);
+          }}
+          value={styles}
+        />
+      </div>
+
       {/* {<article className="css"><textarea onChange={(e) => { setStyles(e.target.value) }} value={styles}></textarea></article>} */}
 
       <style jsx>{`

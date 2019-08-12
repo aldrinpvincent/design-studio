@@ -31,14 +31,45 @@ const Home = () => {
         </button>
       </Link>
 
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="wave"
+        viewBox="0 0 1400 68"
+        enable-background="new 0 0 1440 68"
+      >
+        <path
+          d="m1622.3 1937.7c0 0-410.7 169.1-913.4 75.5-502.7-93.6-977.7 56.3-977.7 56.3v440h1891.1v-571.8"
+          fill="#F2f2fb"
+          transform="translate(0-1977)"
+        />
+      </svg>
+      <article />
+
       <style jsx>{`
+
+       .wave{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: block;
+    position: relative;
+          top: 35vh;
+           margin : -10px;
+}
+
+article {
+background-color: #F2f2fb;
+    height: 33vh;
+    position: relative;
+    top: 35vh;
+    margin : -10px;
+}
         section {
           background-image: radial-gradient(#d7d7d7 1px, transparent 1px),
             radial-gradient(#d7d7d7 1px, transparent 1px);
           background-position: 0 0, 25px 25px;
           background-size: 50px 50px;
           text-align: center;
-          height: 100vh;
+          height: 90vh;
         }
 
         button {
@@ -58,7 +89,7 @@ const Home = () => {
           font-size: 16px;
           font-stretch: 100%;
           position: relative;
-          top: 25vh;
+          top: 20vh;
         }
         button:hover {
           transform: translate3d(0px, -2px, 0px);
@@ -72,7 +103,7 @@ const Home = () => {
             "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
             "Helvetica Neue", sans-serifbody fon;
           position: relative;
-          top: 20vh;
+          top: 15vh;
         }
         p {
           color: #444;
@@ -126,27 +157,23 @@ const Home = () => {
           }
           17% {
             opacity: 1;
-            -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
           }
           19% {
             opacity: 1;
-            -webkit-transform: rotate(98deg);
-            transform: rotate(98deg);
+             transform: rotate(98deg);
           }
           21% {
             opacity: 1;
-            -webkit-transform: rotate(86deg);
-            transform: rotate(86deg);
+             transform: rotate(86deg);
           }
           23% {
             opacity: 1;
-            -webkit-transform: translateY(85px) rotate(83deg);
+           
             transform: translateY(85px) rotate(83deg);
           }
           25% {
             opacity: 0;
-            -webkit-transform: translateY(170px) rotate(80deg);
             transform: translateY(170px) rotate(80deg);
           }
           80% {

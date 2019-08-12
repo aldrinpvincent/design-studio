@@ -54,10 +54,10 @@ const Home = () => {
           background-clip: border-box;
           background-color: rgb(255, 90, 95);
           inline;
-font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
-font-size: 16px;
-font-stretch: 100%;
- position: relative;
+          font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+          font-size: 16px;
+          font-stretch: 100%;
+          position: relative;
           top: 25vh;
         }
         button:hover {

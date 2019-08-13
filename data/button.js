@@ -2,12 +2,11 @@ export const buttonsData = [
   {
     name: "Default",
     css: `
-   button {
+button {
     cursor: pointer;
     padding: 5px 16px;
     font-size: 14px;
     border-radius: 4px;
-    color: #000150;
     background-color: #fff;
     border-color: #d9d9d9;
     box-shadow: 0 2px 0 rgba(0,0,0,0.045);
@@ -16,18 +15,16 @@ export const buttonsData = [
 button:hover {
     color: #40a9ff;
     border-color: #40a9ff;
-}
-`
+}`
   },
   {
     name: "Dashed",
     css: `
-   button {
+button {
     cursor: pointer;
     padding: 5px 16px;
     font-size: 14px;
     border-radius: 4px;
-    color: #000150;
     box-shadow: 0 2px 0 rgba(0,0,0,0.045);
     background-color: #fff;
     border-color: #3E3939;
@@ -36,13 +33,12 @@ button:hover {
 }
 button:hover {
     background-color: #F0F8FF;
-}
-`
+}`
   },
   {
     name: "Round",
     css: `
-   button {
+button {
     width: 55px;
     height: 55px;
     padding: 0;
@@ -79,7 +75,6 @@ button:hover {
     transform: translate3d(0px, -2px, 0px);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px 0px;
     background: rgb(255, 45, 116);
-}
-`
+}`
   }
 ]

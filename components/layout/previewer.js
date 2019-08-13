@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import Editor from "../editor";
+import copy from "copy-to-clipboard";
 
 const Previewer = ({ item, type }) => {
   const { css, name } = item;
   const [styles, setStyles] = useState(css);
   const [showHelp, setShowHelp] = useState(false);
+  const [copyLabel, setCopyLabel] = useState("Copy");
   const Wrapper = styled.div`
     ${styles}}
   `;
@@ -13,12 +15,21 @@ const Previewer = ({ item, type }) => {
   useEffect(() => {
     if (name) {
       setShowHelp(true);
+      setCopyLabel("Copy");
     }
   }, [name]);
 
   useEffect(() => {
     setStyles(css);
   }, [css]);
+
+  function copyToClipBoard() {
+    const copyStatus = copy(css);
+    if (copyStatus) {
+      setCopyLabel("Copied..!");
+      setShowHelp(false);
+    }
+  }
 
   return (
     <section>
@@ -29,11 +40,11 @@ const Previewer = ({ item, type }) => {
             type === "button" ? (
               <button>{name}</button>
             ) : (
-                <div />
-              )
+              <div />
+            )
           ) : (
-              "Select a component from left for customization"
-            )}
+            "Select a component from left for customization"
+          )}
         </Wrapper>
       </article>
 
@@ -45,14 +56,21 @@ const Previewer = ({ item, type }) => {
       </article>
 
       <p className="inline">CSS</p>
-      {showHelp && <div
-        className="tooltips"
-        onClick={() => {
-          setShowHelp(false);
-        }}>
-        <span> Edit below CSS to customize the styles</span>
-      </div>
-      }
+      {name && (
+        <button className="copy-button" onClick={copyToClipBoard}>
+          {copyLabel}
+        </button>
+      )}
+      {showHelp && (
+        <div
+          className="tooltips"
+          onClick={() => {
+            setShowHelp(false);
+          }}
+        >
+          <span> Edit below CSS to customize the styles</span>
+        </div>
+      )}
       <div className="editor">
         <Editor
           onChange={styles => {
@@ -66,6 +84,22 @@ const Previewer = ({ item, type }) => {
       {/* {<article className="css"><textarea onChange={(e) => { setStyles(e.target.value) }} value={styles}></textarea></article>} */}
 
       <style jsx>{`
+        .copy-button {
+          position: relative;
+          left: 81%;
+          cursor: pointer;
+          padding: 5px 16px;
+          font-size: 14px;
+          border-radius: 4px;
+          background-color: #fff;
+          border-color: #d9d9d9;
+          box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+          transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        .copy-button:hover {
+          color: #40a9ff;
+          border-color: #40a9ff;
+        }
         .hide {
           animation: fadeOut 1s;
           display: none !important;
@@ -84,7 +118,7 @@ const Previewer = ({ item, type }) => {
           margin: 0 10px 0 20px;
         }
         p {
-          margin: 0 0 0 0;
+          margin: 0 0 2px 0;
           font-size: 22px;
           color: #355681;
           font-family: "Orienta", sans-serif;

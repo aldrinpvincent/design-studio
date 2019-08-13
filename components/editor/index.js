@@ -6,6 +6,7 @@ const Editor = (props) => {
         const AceEditor = require('react-ace').default;
         require('brace/mode/css');
         require('brace/theme/kuroir');
+        require('brace/ext/language_tools');
 
         return (
             <AceEditor
@@ -13,8 +14,8 @@ const Editor = (props) => {
                 theme="kuroir"
                 name="css-editor"
                 editorProps={{ $blockScrolling: true }}
-                // enableBasicAutocompletion={true}
-                // enableLiveAutocompletion={true}
+                enableBasicAutocompletion={true}
+                enableLiveAutocompletion={true}
                 // enableSnippets={true}
                 {...props}
             />

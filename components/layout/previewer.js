@@ -40,11 +40,11 @@ const Previewer = ({ item, type }) => {
             type === "button" ? (
               <button>{name}</button>
             ) : (
-              <div />
-            )
+                <div />
+              )
           ) : (
-            "Select a component from left for customization"
-          )}
+              "Select a component from left for customization"
+            )}
         </Wrapper>
       </article>
 
@@ -85,8 +85,8 @@ const Previewer = ({ item, type }) => {
 
       <style jsx>{`
         .copy-button {
-          position: relative;
-          left: 81%;
+          float : right;
+          margin-right : 13%;
           cursor: pointer;
           padding: 5px 16px;
           font-size: 14px;
@@ -95,7 +95,14 @@ const Previewer = ({ item, type }) => {
           border-color: #d9d9d9;
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
           transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          margin-bottom : 2px;
         }
+
+          @media (max-width: 1400px) { 
+            .copy-button {
+          margin-right : 0%;
+          }}
+
         .copy-button:hover {
           color: #40a9ff;
           border-color: #40a9ff;
@@ -164,7 +171,7 @@ const Previewer = ({ item, type }) => {
 
         div.tooltips {
           position: relative;
-          left: 20%;
+          left: 5%;
           display: inline;
           top: -5px;
         }

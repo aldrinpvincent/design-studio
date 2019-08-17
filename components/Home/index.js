@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import CssBox from "./cssBox";
 const Home = () => {
   return (
     <section>
+      <CssBox />
       <h2>
-        <p>CSS Snippets</p>
-        <span>A place to </span>
+        <span className="word-start">A place to </span>
         <div className="words first">
           <span>share</span>
           <span>make</span>
@@ -46,23 +47,34 @@ const Home = () => {
       <article />
 
       <style jsx>{`
-
-       .wave{
-    margin-bottom: 0;
-    padding-bottom: 0;
-    display: block;
-    position: relative;
+        .word-start {
+          animation-name: drop;
+          animation-duration: 3s;
+        }
+        @keyframes drop {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        .wave {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          display: block;
+          position: relative;
           top: 35vh;
-           margin : -10px;
-}
+          margin: -10px;
+        }
 
-article {
-background-color: #F2f2fb;
-    height: 33vh;
-    position: relative;
-    top: 35vh;
-    margin : -10px;
-}
+        article {
+          background-color: #f2f2fb;
+          height: 33vh;
+          position: relative;
+          top: 35vh;
+          margin: -10px;
+        }
         section {
           background-image: radial-gradient(#d7d7d7 1px, transparent 1px),
             radial-gradient(#d7d7d7 1px, transparent 1px);
@@ -84,8 +96,8 @@ background-color: #F2f2fb;
           transition: all 150ms ease-out 0s;
           background-clip: border-box;
           background-color: rgb(255, 90, 95);
-          inline;
-          font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+          font-family: Circular, -apple-system, system-ui, Roboto,
+            "Helvetica Neue", sans-serif;
           font-size: 16px;
           font-stretch: 100%;
           position: relative;
@@ -94,7 +106,7 @@ background-color: #F2f2fb;
         button:hover {
           transform: translate3d(0px, -2px, 0px);
           box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px 0px;
-         background-clip: border-box;
+          background-clip: border-box;
           background-color: rgb(255, 45, 116);
         }
 
@@ -121,62 +133,58 @@ background-color: #F2f2fb;
           margin: 0 2px;
         }
         .first span {
-          animation: rotateWordsFirst 18s linear infinite 0s;
+          animation: rotateWordsFirst 18s linear infinite 3s;
         }
         .second span {
-          animation: rotateWordsFirst 18s linear infinite 0s;
+          animation: rotateWordsFirst 18s linear infinite 3s;
         }
-        @media (max-width: 768px) { 
-
-      .words {
-          display: block;
-        }
-        .first span,
-        .second span {
-          display: block;
-          margin-top : -15px;
-          margin-left : 0 !important;;
-        }
-        .first span:nth-child(1) {
-          margin-top : 10px;
-          margin-left : 0 !important;
-        }
-        }
-
-         @media (max-width: 1146px) { 
-
-        .first span,
-        .second span {
-          margin-left : -15px;
-        }
-        .first span:nth-child(1) {
-          margin-left : 10px;
-        }
-        p + span {
-          display : block;
-        }
+        @media (max-width: 768px) {
+          .words {
+            display: block;
+          }
+          .first span,
+          .second span {
+            display: block;
+            margin-top: -15px;
+            margin-left: 0 !important;
+          }
+          .first span:nth-child(1) {
+            margin-top: 10px;
+            margin-left: 0 !important;
+          }
         }
 
+        @media (max-width: 1146px) {
+          .first span,
+          .second span {
+            margin-left: -15px;
+          }
+          .first span:nth-child(1) {
+            margin-left: 10px;
+          }
+          p + span {
+            display: block;
+          }
+        }
 
-        
         .words span:nth-child(2) {
-          animation-delay: 3s;
+          animation-delay: 6s;
           color: #6b889d;
         }
         .words span:nth-child(3) {
-          animation-delay: 6s;
+          animation-delay: 9s;
           color: #6b739d;
         }
         .words span:nth-child(4) {
-          animation-delay: 9s;
+          animation-delay: 12s;
           color: #7a6b9d;
         }
         .words span:nth-child(5) {
-          animation-delay: 12s;
+          animation-delay: 15s;
           color: #8d6b9d;
         }
         .words span:nth-child(6) {
-          animation-delay: 15s;
+          animation-delay: 18s;
           color: #9b6b9d;
         }
 
@@ -193,15 +201,15 @@ background-color: #F2f2fb;
           }
           19% {
             opacity: 1;
-             transform: rotate(98deg);
+            transform: rotate(98deg);
           }
           21% {
             opacity: 1;
-             transform: rotate(86deg);
+            transform: rotate(86deg);
           }
           23% {
             opacity: 1;
-           
+
             transform: translateY(85px) rotate(83deg);
           }
           25% {
@@ -220,19 +228,15 @@ background-color: #F2f2fb;
           0% {
             opacity: 1;
             animation-timing-function: ease-in;
-            
           }
           8% {
             opacity: 1;
-           
           }
           19% {
             opacity: 1;
-            
           }
           25% {
             opacity: 0;
-            
           }
           100% {
             opacity: 0;

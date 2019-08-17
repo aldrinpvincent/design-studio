@@ -22,7 +22,7 @@ const CssBox = () => {
           animation-duration: 3s;
           animation-name: boxGrow;
           position: relative;
-          top: 13vh;
+          top: 15vh;
         }
 
         @keyframes boxGrow {

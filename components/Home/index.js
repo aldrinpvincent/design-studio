@@ -64,15 +64,15 @@ const Home = () => {
           padding-bottom: 0;
           display: block;
           position: relative;
-          top: 35vh;
+          top: 37vh;
           margin: -10px;
         }
 
         article {
           background-color: #f2f2fb;
-          height: 33vh;
+          height: 34vh;
           position: relative;
-          top: 35vh;
+          top: 37vh;
           margin: -10px;
         }
         section {
@@ -115,7 +115,7 @@ const Home = () => {
             "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
             "Helvetica Neue", sans-serifbody fon;
           position: relative;
-          top: 15vh;
+          top: 17vh;
         }
         p {
           color: #444;

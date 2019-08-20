@@ -5,6 +5,10 @@ function Header() {
     <header>
       <title>Awesome CSS</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta
+        name="description"
+        content="Awesome CSS is a place to share css code snippets, Easy customize, copy and paste css buttons, loaders, inputs etc.."
+      />
 
       <Link href="/">
         <h1>Awesome CSS</h1>

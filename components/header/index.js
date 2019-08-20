@@ -3,6 +3,9 @@ import Link from "next/link";
 function Header() {
   return (
     <header>
+      <title>Awesome CSS</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
       <Link href="/">
         <h1>Awesome CSS</h1>
       </Link>

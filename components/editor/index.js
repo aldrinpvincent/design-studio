@@ -16,6 +16,7 @@ const Editor = (props) => {
                 editorProps={{ $blockScrolling: true }}
                 enableBasicAutocompletion={true}
                 enableLiveAutocompletion={true}
+                debounceChangePeriod={500}
                 // enableSnippets={true}
                 {...props}
             />

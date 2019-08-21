@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import Editor from "../editor";
 import copy from "copy-to-clipboard";
+import { createMarkup } from "../../lib/createMarkup";
 
 const Previewer = ({ item, type }) => {
-  const { css, name } = item;
+  const { css, name, html } = item;
   const [styles, setStyles] = useState(css);
   const [showHelp, setShowHelp] = useState(false);
   const [copyLabel, setCopyLabel] = useState("Copy");
   const Wrapper = styled.div`
-    ${styles}}
+    ${styles}
   `;
 
   useEffect(() => {
@@ -37,11 +38,7 @@ const Previewer = ({ item, type }) => {
       <article className="preview">
         <Wrapper>
           {name ? (
-            type === "button" ? (
-              <button>{name}</button>
-            ) : (
-                <div />
-              )
+            <span dangerouslySetInnerHTML={createMarkup(html)} />
           ) : (
               "Select a component from left for customization"
             )}

@@ -16,10 +16,15 @@ function Header() {
 
       <style jsx>
         {`
+         body {
+            font-family: apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+            "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serifbody font;
+          }
           h1 {
             font-family: apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-              "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-              "Helvetica Neue", sans-serifbody fon;
+            "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serifbody font;
             color: #7c795d;
             font-size: 33px;
             font-weight: normal;

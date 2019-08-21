@@ -1,6 +1,7 @@
 export const loadersData = [
   {
     name: "Spinner",
+    html: `<div />`,
     css: `
 div {
   border: 8px solid #f3f3f3;

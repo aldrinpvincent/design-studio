@@ -1,6 +1,7 @@
 export const buttonsData = [
   {
     name: "Default",
+    html: `<button>Default</button>`,
     css: `
 button {
     cursor: pointer;
@@ -19,6 +20,7 @@ button:hover {
   },
   {
     name: "Dashed",
+    html: `<button>Dashed</button>`,
     css: `
 button {
     cursor: pointer;
@@ -37,6 +39,7 @@ button:hover {
   },
   {
     name: "Round",
+    html: `<button>Round</button>`,
     css: `
 button {
     width: 55px;
@@ -46,18 +49,17 @@ button {
     border-radius: 50%;
     color: #fff;
     background-color: #1890ff;
-    border-color: #1890ff;
     box-shadow: 0 2px 0 rgba(0,0,0,0.045);
     cursor : pointer;
     transition: all .3s cubic-bezier(.645, .045, .355, 1);
 }
 button:hover {
     background-color: #40a9ff;
-    border-color: #40a9ff;
 }`
   },
   {
     name: "Short Jump",
+    html: `<button>Short Jump</button>`,
     css: `
 button {
     cursor: pointer;

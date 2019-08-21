@@ -16,7 +16,7 @@ const CssBox = () => {
           border: 2px solid black;
           font-family: apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
             "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-            "Helvetica Neue", sans-serifbody fon;
+            "Helvetica Neue", sans-serifbody font;
           padding: 3px 6px;
           width: 174px;
           animation-duration: 3s;

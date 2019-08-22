@@ -1,15 +1,20 @@
 import styled from "@emotion/styled";
+import { createMarkup } from "../../../lib/createMarkup";
 
 const Loader = ({ loader, onClick }) => {
-  const { name, css } = loader;
+  const { name, css, html } = loader;
   const Wrapper = styled.span`
-    ${css}}
+    ${css}
   `;
+
+  const content = {
+    __dangerousHTML: createMarkup(html)
+  };
 
   return (
     <>
       <Wrapper onClick={onClick}>
-        <div />
+        <section dangerouslySetInnerHTML={createMarkup(html)} />
       </Wrapper>
       <style jsx>{`
         span {

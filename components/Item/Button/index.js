@@ -2,9 +2,9 @@ import styled from "@emotion/styled";
 import { createMarkup } from "../../../lib/createMarkup";
 
 const Button = ({ button, onClick }) => {
-  const { name, css, html } = button;
+  const { name, css, html, backgroundColor } = button;
   const Wrapper = styled.span`
-    ${css}}
+    ${css}
   `;
 
   const content = {
@@ -24,9 +24,10 @@ const Button = ({ button, onClick }) => {
           justify-content: center;
           height: 100px;
           box-sizing: border-box;
+          background-color : ${backgroundColor}
         }
         span:hover {
-          background-color: rgba(0, 0, 0, 0.05);
+          background-color:  ${backgroundColor || "rgba(0, 0, 0, 0.05)"};
         }
         .active {
           background-color: rgba(0, 0, 0, 0.05);

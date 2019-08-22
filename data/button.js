@@ -62,7 +62,7 @@ button:hover {
     html: `<button>Short Jump</button>`,
     css: `
 button {
-    cursor: pointer;
+    padding: 12px 20px;
     transform: translate3d(0px, 0px, 0px);
     font-size: 14px;
     font-weight: 600;
@@ -77,6 +77,42 @@ button:hover {
     transform: translate3d(0px, -2px, 0px);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 6px 0px;
     background: rgb(255, 45, 116);
+}`
+  },
+  {
+    name: "Expand",
+    html: `<button>Expand</button>`,
+    css: `
+button {
+  cursor: pointer;
+  border: 1px solid blue;
+  padding: 5px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  background: black;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  transform: scale(1.1);
+}`
+  },
+  {
+    name: "Contract",
+    html: `<button>Contract</button>`,
+    css: `
+button {
+  cursor: pointer;
+  border: 1px solid blue;
+  padding: 7px 18px;
+  font-size: 14px;
+  border-radius: 4px;
+  background: black;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  transform: scale(0.9);
 }`
   }
 ]

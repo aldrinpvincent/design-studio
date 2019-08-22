@@ -72,7 +72,9 @@ const Previewer = ({ item, type }) => {
         <Editor
           onChange={styles => {
             setStyles(styles);
-            setShowHelp(false);
+            setTimeout(() => {
+              setShowHelp(false)
+            }, 3000);
           }}
           value={styles}
         />

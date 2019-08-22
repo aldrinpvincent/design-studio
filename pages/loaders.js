@@ -3,7 +3,6 @@ import Items from "../components/layout/Items";
 import Previewer from "../components/layout/previewer";
 import Layout from "../components/layout";
 import { loadersData } from "../data/loader";
-import Button from "../components/Item/Button";
 import Loader from "../components/Item/Loader";
 
 const Loaders = () => {

@@ -62,6 +62,7 @@ button:hover {
     html: `<button>Short Jump</button>`,
     css: `
 button {
+    cursor: pointer;
     padding: 12px 20px;
     transform: translate3d(0px, 0px, 0px);
     font-size: 14px;

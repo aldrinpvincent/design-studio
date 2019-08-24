@@ -38,9 +38,12 @@ const GithubCorner = () => {
         .github-corner:hover .octo-arm {
         animation: octocat-wave 560ms ease-in-out
     }
-
+    section{
+      position : absolute;
+      right : 0;
+      top :0;
+    }
     @keyframes octocat-wave {
-
         0%,
         100% {
             transform: rotate(0)

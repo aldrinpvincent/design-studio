@@ -1,4 +1,5 @@
 import Link from "next/link";
+import GithubCorner from "../github-corner";
 
 function Header() {
   return (
@@ -9,10 +10,12 @@ function Header() {
         name="description"
         content="Awesome CSS is a place to share css code snippets, Easy customize, copy and paste css buttons, loaders, inputs etc.."
       />
+      <GithubCorner />
 
       <Link href="/">
         <h1>Awesome CSS</h1>
       </Link>
+
 
       <style jsx>
         {`

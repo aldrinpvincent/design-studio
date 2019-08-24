@@ -31,9 +31,9 @@ const CSSEditor = ({ styles, setStyles, name, setShowHelp, setCopyLabel, showHel
                 <Editor
                     onChange={styles => {
                         setStyles(styles);
-                        // setTimeout(() => {
-                        //     setShowHelp(false)
-                        // }, 3000);
+                        setTimeout(() => {
+                            setShowHelp(false)
+                        }, 3000);
                     }}
                     value={styles} />
             </div>

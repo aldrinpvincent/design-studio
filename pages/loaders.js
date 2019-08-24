@@ -3,8 +3,7 @@ import Items from "../components/layout/Items";
 import Previewer from "../components/layout/previewer";
 import Layout from "../components/layout";
 import { loadersData } from "../data/loader";
-import Loader from "../components/Item/Loader";
-
+import Item from "../components/Item";
 const Loaders = () => {
 
     const [loader, setLoader] = useState({});
@@ -16,10 +15,10 @@ const Loaders = () => {
         <Layout>
             <Items>
                 {loadersData.map(loader => {
-                    return (<Loader key={loader.name} onClick={() => { handleClick(loader) }} loader={loader} />)
+                    return (<Item key={loader.name} onClick={() => { handleClick(loader) }} item={loader} />)
                 })}
             </Items>
-            <Previewer item={loader} type="div" />
+            <Previewer item={loader} />
         </Layout >
     );
 };

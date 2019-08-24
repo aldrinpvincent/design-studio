@@ -3,7 +3,7 @@ import Items from "../components/layout/Items";
 import Previewer from "../components/layout/previewer";
 import Layout from "../components/layout";
 import { buttonsData } from "../data/button";
-import Button from "../components/Item/Button";
+import Item from "../components/Item";
 
 const Buttons = () => {
 
@@ -17,10 +17,10 @@ const Buttons = () => {
     <Layout>
       <Items >
         {buttonsData.map(button => {
-          return (<Button key={button.name} onClick={() => { handleClick(button) }} button={button} />)
+          return (<Item key={button.name} onClick={() => { handleClick(button) }} item={button} />)
         })}
       </Items>
-      <Previewer item={button} type="button" />
+      <Previewer item={button} />
     </Layout >
   );
 };

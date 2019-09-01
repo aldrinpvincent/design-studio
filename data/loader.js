@@ -70,7 +70,6 @@ div {
             </div>`,
     css: `
 .dot-loader {
-  display: inline-block;
   position: relative;
   width: 64px;
   height: 64px;
@@ -78,8 +77,8 @@ div {
 .dot-loader div {
   position: absolute;
   top: 27px;
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: #fa7d16;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);

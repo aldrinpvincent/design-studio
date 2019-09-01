@@ -86,11 +86,11 @@ button:hover {
     css: `
 button {
   cursor: pointer;
-  border: 1px solid blue;
+  border: 1px solid red;
   padding: 5px 16px;
   font-size: 14px;
   border-radius: 4px;
-  background: black;
+  background-color: rgb(255, 90, 95);
   color: white;
   transition: all 0.2s ease-in-out;
 }
@@ -104,11 +104,11 @@ button:hover {
     css: `
 button {
   cursor: pointer;
-  border: 1px solid blue;
+  border: 1px solid red;
   padding: 7px 18px;
   font-size: 14px;
   border-radius: 4px;
-  background: black;
+  background-color: rgb(255, 90, 95);
   color: white;
   transition: all 0.2s ease-in-out;
 }

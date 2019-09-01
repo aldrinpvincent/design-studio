@@ -3,6 +3,7 @@ const GithubCorner = () => {
     <section>
       <a
         href="https://github.com/aldrinpvincent/css-snippets"
+        target="_blank"
         className="github-corner"
         aria-label="View source on GitHub"
       >

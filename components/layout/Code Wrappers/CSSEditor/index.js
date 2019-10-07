@@ -4,41 +4,41 @@ import copy from "copy-to-clipboard";
 import Editor from "../../../editor";
 
 const CSSEditor = ({ styles, setStyles, name, setShowHelp, setCopyLabel, showHelp, copyLabel }) => {
-    function copyToClipBoard() {
-        const copyStatus = copy(css);
-        if (copyStatus) {
-            setCopyLabel("Copied..!");
-            setShowHelp(false);
-        }
+  function copyToClipBoard() {
+    const copyStatus = copy(styles);
+    if (copyStatus) {
+      setCopyLabel("Copied..!");
+      setShowHelp(false);
     }
-    return (
-        <section>
-            <p className="inline">CSS</p>
-            {name && (
-                <button className="copy-button" onClick={copyToClipBoard}>
-                    {copyLabel}
-                </button>)
-            }
-            {showHelp && (
-                <div
-                    className="tooltips"
-                    onClick={() => { setShowHelp(false); }}
-                >
-                    <span> Edit below CSS to customize the styles</span>
-                </div>)
-            }
-            <div className="editor">
-                <Editor
-                    onChange={styles => {
-                        setStyles(styles);
-                        setTimeout(() => {
-                            setShowHelp(false)
-                        }, 3000);
-                    }}
-                    value={styles} />
-            </div>
-            {/* {<article className="css"><textarea onChange={(e) => { setStyles(e.target.value) }} value={styles}></textarea></article>} */}
-            <style jsx>{`
+  }
+  return (
+    <section>
+      <p className="inline">CSS</p>
+      {name && (
+        <button className="copy-button" onClick={copyToClipBoard}>
+          {copyLabel}
+        </button>)
+      }
+      {showHelp && (
+        <div
+          className="tooltips"
+          onClick={() => { setShowHelp(false); }}
+        >
+          <span> Edit below CSS to customize the styles</span>
+        </div>)
+      }
+      <div className="editor">
+        <Editor
+          onChange={styles => {
+            setStyles(styles);
+            setTimeout(() => {
+              setShowHelp(false)
+            }, 3000);
+          }}
+          value={styles} />
+      </div>
+      {/* {<article className="css"><textarea onChange={(e) => { setStyles(e.target.value) }} value={styles}></textarea></article>} */}
+      <style jsx>{`
 .inline {
   display: inline;
 }
@@ -125,8 +125,8 @@ div.tooltips span:after {
   border-left: 8px solid transparent;
 }              
 `}</style>
-        </section>
-    );
+    </section>
+  );
 }
 
 export default CSSEditor;

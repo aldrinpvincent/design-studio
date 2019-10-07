@@ -4,8 +4,8 @@ export const inputsData = [
     html: ` <input type="text" placeholder="Enter data...">`,
     css: `
 input[type=text], select {
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 8px 10px;
+  margin: 4px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
@@ -20,7 +20,6 @@ input[type=text], select {
 </div>
 `,
     css: `
-
 .input-wrapper {
      margin: 40px 3%;
      position: relative;
@@ -68,8 +67,6 @@ input[type=text], select {
  input:focus {
      outline: none;
 }
-
-    
     `
   }
 ]
